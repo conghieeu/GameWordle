@@ -7,7 +7,7 @@ public class GoogleAdsManager : MonoBehaviour
 {
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-  private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else
@@ -15,7 +15,6 @@ public class GoogleAdsManager : MonoBehaviour
 #endif
 
     public static GoogleAdsManager Instance;
-    public GameObject _errorInterBoard;
     public GameObject _spamError;
     public GameObject _suggest;
     public float Timer = 20;
@@ -65,6 +64,19 @@ public class GoogleAdsManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Chơi thêm dòng thứ 7 
+    /// </summary>
+    // public void UserChoseToAddMoreCurrent()
+    // {
+    //     if (!CheckInternetUser())
+    //         if (this.rewardedAd.IsLoaded())
+    //         {
+    //             this.rewardedAd.Show();
+    //             GameObject.FindObjectOfType<Submit>().extendingButton();
+    //         }
+    // }
+
+    /// <summary>
     /// Quảng cáo phần thưởng gợi ý từ
     /// </summary>
     public void ShowRewardAdsSuggest()
@@ -85,8 +97,6 @@ public class GoogleAdsManager : MonoBehaviour
             CreateBannerView();
         }
     }
-
-    public void Reward() => FindObjectOfType<Submit>().extendingButton();
 
     #region Banner Ads ===============================================================
 
@@ -360,8 +370,7 @@ public class GoogleAdsManager : MonoBehaviour
                 // TODO: Reward the user.
                 Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
 
-                // Phần thưởng gợi ý từ ra.
-                Suggest.Instance.SuggestButton();
+                // TODO: Phần thưởng gợi ý từ ra.
             });
         }
     }

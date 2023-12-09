@@ -12,8 +12,6 @@ public class Resize : MonoBehaviour
 
     public void fixedScaleWhenCall()
     {
-        
         _resize.aspectRatio = 0.714f;
-        
     }
 }
