@@ -6,7 +6,7 @@ using GoogleMobileAds.Api;
 
 public class IAPManager : MonoBehaviour
 {
-    private string RemoveAd = "com.company.namegame.product";
+    // private string RemoveAd = "com.company.namegame.product";
 
     public GameObject ThankYou;
     public GameObject Offer;
