@@ -2031,7 +2031,7 @@ GameObject:
   - component: {fileID: 87496365}
   - component: {fileID: 87496364}
   m_Layer: 5
-  m_Name: watch Button
+  m_Name: BtnWatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2101,33 +2101,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741080694}
-        m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
-        m_MethodName: UserChoseOneMoreSuggest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 741080697}
-        m_TargetAssemblyTypeName: ErrorWifi, Assembly-CSharp
-        m_MethodName: CheckInternet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1921422370}
         m_TargetAssemblyTypeName: Suggest, Assembly-CSharp
         m_MethodName: TurnOffNotification
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 741080694}
+        m_TargetAssemblyTypeName: GoogleAdsManager, Assembly-CSharp
+        m_MethodName: ShowRewardAdsSuggest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6873,7 +6861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 508.85577, y: -374.07687}
+  m_AnchoredPosition: {x: 530.4186, y: -274.03186}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431040700
@@ -13763,7 +13751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 50.000122}
   m_SizeDelta: {x: 0, y: 430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723505522
@@ -14550,8 +14538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 272.50006}
-  m_SizeDelta: {x: 0, y: 1309.1538}
+  m_AnchoredPosition: {x: 0, y: 272.5}
+  m_SizeDelta: {x: 0, y: 1199.064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771856778
 MonoBehaviour:
@@ -28113,7 +28101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.8558, y: -383.07687}
+  m_AnchoredPosition: {x: -541.41864, y: -283.03192}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602550918
@@ -32174,7 +32162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 345}
+  m_AnchoredPosition: {x: 0, y: 390}
   m_SizeDelta: {x: 0, y: 530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853333341
@@ -33907,8 +33895,8 @@ MonoBehaviour:
   - {fileID: 600195772}
   bankWord: {fileID: 1354420888}
   KeyBoard: {fileID: 605282669}
-  CorrectColor: {r: 0.033018887, g: 1, b: 0.25800943, a: 0.5803922}
-  IncorrectColor: {r: 1, g: 0.98823535, b: 0, a: 0.5803922}
+  CorrectColor: {r: 0, g: 1, b: 0, a: 0.5803922}
+  IncorrectColor: {r: 0.912526, g: 1, b: 0, a: 0.5803922}
   NotExistColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0.62352943}
   wordCorrect: 69
   wordIncorrect: 42

@@ -10,6 +10,7 @@ public class ErrorWifi : MonoBehaviour
     public GameObject OneMoreChance;
     public GameObject OfferPanel;
     
+    /// <summary> Kiểm tra wifi cho bật không </summary>
     public bool CheckInternet()
     {
         if(Application.internetReachability == NetworkReachability.NotReachable)

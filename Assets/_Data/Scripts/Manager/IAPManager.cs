@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEditor.Purchasing;
+// using UnityEditor.Purchasing;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using GoogleMobileAds.Api;
@@ -19,17 +19,17 @@ public class IAPManager : MonoBehaviour
         }
     }
 
-    public void OnPurchaseComplete(Product product)
-    {
-        if (product.id == RemoveAd)
-        {
-            RemoveAdsObject();
-            PlayerPrefs.SetString("AdRemoved", "AdRemoved");
+    // public void OnPurchaseComplete(Product product)
+    // {
+    //     if (product.id == RemoveAd)
+    //     {
+    //         RemoveAdsObject();
+    //         PlayerPrefs.SetString("AdRemoved", "AdRemoved");
 
-            ThankYou.SetActive(true);
-            Offer.SetActive(false);
-        }
-    }
+    //         ThankYou.SetActive(true);
+    //         Offer.SetActive(false);
+    //     }
+    // }
 
     public void OnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {

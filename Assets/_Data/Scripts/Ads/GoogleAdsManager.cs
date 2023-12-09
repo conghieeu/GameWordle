@@ -26,6 +26,7 @@ public class GoogleAdsManager : MonoBehaviour
 
     private bool TimerStop = true;
     private bool acitved;
+    ErrorWifi _errorWifi;
 
     private void Awake()
     {
@@ -39,6 +40,10 @@ public class GoogleAdsManager : MonoBehaviour
         {
             // This callback is called once the MobileAds SDK is initialized.
         });
+
+        _errorWifi = GetComponent<ErrorWifi>();
+
+        LoadAd();
     }
 
     private void Update()
@@ -59,26 +64,25 @@ public class GoogleAdsManager : MonoBehaviour
         }
     }
 
-    public void UserChoseToWatchAd()
+    /// <summary>
+    /// Quảng cáo phần thưởng gợi ý từ
+    /// </summary>
+    public void ShowRewardAdsSuggest()
     {
-        TimerStop = false;
-        if (!CheckInternetUser() && rewardedAd.IsLoaded()) rewardedAd.Show();
-    }
-
-    public void UserChoseOneMoreSuggest()
-    {
-        if (!CheckInternetUser() && rewardedAd.IsLoaded())
+        if (!_errorWifi.CheckInternet())
         {
-            this.rewardedAd.Show();
-            Suggest.FindObjectOfType<Suggest>().SuggestButton();
+            ShowRewardedAd();
         }
     }
 
-    public void UserChoseToAddMoreCurrent()
+    /// <summary>
+    /// Hiện bảng quảng cáo ở dưới màn hình
+    /// </summary>
+    public void ShowBannerAds()
     {
-        if (! && _rewardedAd.CanShowAd())
+        if (!_errorWifi.CheckInternet())
         {
-            _rewardedAd.Show();
+            CreateBannerView();
         }
     }
 
@@ -100,7 +104,7 @@ public class GoogleAdsManager : MonoBehaviour
         }
 
         // Create a 320x50 banner at top of the screen
-        _bannerView = new BannerView(_adUnitId, AdSize.Banner, AdPosition.Top);
+        _bannerView = new BannerView(_adUnitId, AdSize.Banner, AdPosition.Bottom);
     }
 
     public void DestroyBannerView()
@@ -355,6 +359,9 @@ public class GoogleAdsManager : MonoBehaviour
             {
                 // TODO: Reward the user.
                 Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
+
+                // Phần thưởng gợi ý từ ra.
+                Suggest.Instance.SuggestButton();
             });
         }
     }

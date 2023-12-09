@@ -459,7 +459,7 @@ public class KeyWord : MonoBehaviour
         
     }
 
-    // Chèn màu vào letter ứng với mỗi letter đã check và tự động check và đổi màu bazz
+    // Khi người nhập xong dãy chữ, Tô màu vào bảng theo từng dãy, Sau đó tô màu vàng và màu xanh
     public void squareColor()
     {
         // mau gray

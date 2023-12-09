@@ -2,10 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-
 public class ShareButton : MonoBehaviour
 {
     public Button shareButton;
+    private bool isFocus = false;
+    private bool isProcessing = false;
 
     void Start()
     {
