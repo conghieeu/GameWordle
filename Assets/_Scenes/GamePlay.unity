@@ -2101,21 +2101,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741080694}
-        m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
-        m_MethodName: UserChoseOneMoreSuggest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 741080697}
-        m_TargetAssemblyTypeName: ErrorWifi, Assembly-CSharp
-        m_MethodName: CheckInternet
+      - m_Target: {fileID: 741080698}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: GetRewardAdsSuggestLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4417,10 +4405,10 @@ RectTransform:
   - {fileID: 1526790665}
   m_Father: {fileID: 536896667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -48}
-  m_SizeDelta: {x: 1078, y: 2396}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230265926
 MonoBehaviour:
@@ -6657,11 +6645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.39247
+      value: 187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.08804
+      value: 157.7829
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6693,11 +6681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480.48117
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.54402
+      value: -78.89145
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6869,11 +6857,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 508.85577, y: -374.07687}
+  m_AnchoredPosition: {x: 520.8558, y: -327.0769}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431040700
@@ -6989,7 +6977,7 @@ MonoBehaviour:
   bottomReference:
     target: {fileID: 1853333339}
     edge: 1
-    offset: 28
+    offset: 20
   leftReference:
     target: {fileID: 0}
     edge: 0
@@ -6997,7 +6985,7 @@ MonoBehaviour:
   rightReference:
     target: {fileID: 1730765083}
     edge: 5
-    offset: 32
+    offset: 20
   allowChangeSize: 1
   disableOnStart: 1
   settings: {fileID: 11400000, guid: 19a960b6dee4ca444928b817d66a256d, type: 2}
@@ -7629,19 +7617,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 462794680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 741080697}
-        m_TargetAssemblyTypeName: ErrorWifi, Assembly-CSharp
-        m_MethodName: CheckInternet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &462794680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7700,10 +7676,34 @@ MonoBehaviour:
       m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 491010192}
+        m_TargetAssemblyTypeName: IAPManager, Assembly-CSharp
+        m_MethodName: OnPurchaseComplete
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPurchaseFailed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 491010192}
+        m_TargetAssemblyTypeName: IAPManager, Assembly-CSharp
+        m_MethodName: OnAdFailedToLoad
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   titleText: {fileID: 0}
   descriptionText: {fileID: 0}
   priceText: {fileID: 1155413914}
@@ -8874,6 +8874,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502936564}
   m_CullTransparentMesh: 1
+--- !u!1 &503819044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503819045}
+  - component: {fileID: 503819046}
+  m_Layer: 0
+  m_Name: System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503819045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503819044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1206346586}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &503819046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503819044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e8d252241452f4a91e85246798ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  errorPanel: {fileID: 841819258}
+  Notification: {fileID: 1563412958}
+  OneMoreChance: {fileID: 797392813}
+  OfferPanel: {fileID: 694310640}
 --- !u!224 &503945569 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
@@ -10200,7 +10248,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1604708478}
   - {fileID: 2100735778}
   - {fileID: 1247810306}
   - {fileID: 1993027797}
@@ -10213,7 +10260,9 @@ RectTransform:
   - {fileID: 1269543467}
   - {fileID: 1563412959}
   - {fileID: 841819259}
-  m_Father: {fileID: 1446774880}
+  - {fileID: 560119642}
+  - {fileID: 759597885}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10533,7 +10582,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1576569686}
-  m_Father: {fileID: 1604708478}
+  m_Father: {fileID: 536896667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13901,31 +13950,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 741080695}
-  - component: {fileID: 741080694}
-  - component: {fileID: 741080697}
+  - component: {fileID: 741080698}
   m_Layer: 0
-  m_Name: GoogleAdManager
+  m_Name: GoogleAdsMob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &741080694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741080693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ed0b6b8d9cc0f4b946c96369338605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _errorInterBoard: {fileID: 0}
-  _spamError: {fileID: 0}
-  _suggest: {fileID: 431040698}
-  Timer: 20000
 --- !u!4 &741080695
 Transform:
   m_ObjectHideFlags: 0
@@ -13941,7 +13973,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1206346586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &741080697
+--- !u!114 &741080698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13950,13 +13982,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 741080693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e8d252241452f4a91e85246798ea6f, type: 3}
+  m_Script: {fileID: 11500000, guid: bfae118fcb427a64488e77c9ddd4f9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorPanel: {fileID: 841819258}
-  Notification: {fileID: 1563412958}
-  OneMoreChance: {fileID: 797392813}
-  OfferPanel: {fileID: 694310640}
+  totalCoinsTxt: {fileID: 0}
+  appId: ca-app-pub-1385093244148841~5602672977
+  img: {fileID: 0}
 --- !u!1 &745211069
 GameObject:
   m_ObjectHideFlags: 0
@@ -14234,7 +14265,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 164851653}
-  m_Father: {fileID: 1604708478}
+  m_Father: {fileID: 536896667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14523,7 +14554,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 771856777}
-  - component: {fileID: 771856778}
   m_Layer: 5
   m_Name: Table Letters
   m_TagString: Untagged
@@ -14546,44 +14576,13 @@ RectTransform:
   - {fileID: 95792209}
   - {fileID: 1310638767}
   - {fileID: 2030817630}
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 272.50006}
-  m_SizeDelta: {x: 0, y: 1309.1538}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -830}
+  m_SizeDelta: {x: 1000, y: 1371.91}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &771856778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771856776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c2b230bdd882d4c9201d2b6bcca677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topReference:
-    target: {fileID: 1446774880}
-    edge: 1
-    offset: 150
-  bottomReference:
-    target: {fileID: 1446774880}
-    edge: 2
-    offset: 695
-  leftReference:
-    target: {fileID: 0}
-    edge: 0
-    offset: 0
-  rightReference:
-    target: {fileID: 0}
-    edge: 0
-    offset: 0
-  allowChangeSize: 1
-  disableOnStart: 1
-  settings: {fileID: 11400000, guid: 19a960b6dee4ca444928b817d66a256d, type: 2}
 --- !u!1 &772764311
 GameObject:
   m_ObjectHideFlags: 0
@@ -15304,7 +15303,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 741080694}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
         m_MethodName: GameOver
         m_Mode: 1
@@ -15704,7 +15703,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1079527220}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: StartTheGame
+        m_MethodName: StartupTheGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1260908465}
+        m_TargetAssemblyTypeName: AdsPanel, Assembly-CSharp
+        m_MethodName: OnPanelOffer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16596,7 +16607,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741080694}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
         m_MethodName: UserChoseToAddMoreCurrent
         m_Mode: 1
@@ -16690,12 +16701,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889322978}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -19126,11 +19137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.39247
+      value: 187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.08804
+      value: 157.7829
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19162,11 +19173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 89.696236
+      value: 93.6
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.54402
+      value: -78.89145
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19587,7 +19598,7 @@ RectTransform:
   - {fileID: 1919768194}
   - {fileID: 761727370}
   - {fileID: 1260908460}
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -19874,7 +19885,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741080697}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ErrorWifi, Assembly-CSharp
         m_MethodName: loseCheckInternet
         m_Mode: 1
@@ -20333,6 +20344,65 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7614665370252370002, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
   m_PrefabInstance: {fileID: 1026628383}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1144796133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1144796134}
+  - component: {fileID: 1144796135}
+  m_Layer: 5
+  m_Name: SafeArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1144796134
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144796133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1730765083}
+  - {fileID: 1853333339}
+  - {fileID: 771856777}
+  - {fileID: 1602550917}
+  - {fileID: 431040699}
+  - {fileID: 1079527219}
+  - {fileID: 536896667}
+  - {fileID: 889322979}
+  m_Father: {fileID: 1446774880}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1144796135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144796133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97afc556caea1c44969477eb7ddec74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConformX: 1
+  ConformY: 1
+  Logging: 0
 --- !u!1 &1155413912
 GameObject:
   m_ObjectHideFlags: 0
@@ -21393,6 +21463,7 @@ Transform:
   - {fileID: 741080695}
   - {fileID: 1767996062}
   - {fileID: 491010191}
+  - {fileID: 503819045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1208522730 stripped
@@ -23192,11 +23263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.39247
+      value: 187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.08804
+      value: 157.7829
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23228,11 +23299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 285.0887
+      value: 296.8
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.54402
+      value: -78.89145
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -26246,14 +26317,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1730765083}
-  - {fileID: 1853333339}
-  - {fileID: 771856777}
-  - {fileID: 1602550917}
-  - {fileID: 431040699}
-  - {fileID: 1079527219}
-  - {fileID: 536896667}
-  - {fileID: 889322979}
+  - {fileID: 1144796134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -26845,11 +26909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.39247
+      value: 187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.08804
+      value: 157.7829
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26881,11 +26945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 675.87366
+      value: 703.19995
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.54402
+      value: -78.89145
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27984,7 +28048,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 741080694}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
         m_MethodName: GameOver
         m_Mode: 1
@@ -28109,11 +28173,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.8558, y: -383.07687}
+  m_AnchoredPosition: {x: -520.8558, y: -327.0769}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1602550918
@@ -28135,11 +28199,11 @@ MonoBehaviour:
   bottomReference:
     target: {fileID: 1853333339}
     edge: 1
-    offset: 19
+    offset: 20
   leftReference:
     target: {fileID: 1730765083}
     edge: 4
-    offset: 21
+    offset: 20
   rightReference:
     target: {fileID: 0}
     edge: 0
@@ -28246,43 +28310,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6540147931833441275, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
   m_PrefabInstance: {fileID: 1799303933}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1604708477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1604708478}
-  m_Layer: 5
-  m_Name: EndGame
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1604708478
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604708477}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 560119642}
-  - {fileID: 759597885}
-  m_Father: {fileID: 536896667}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1617165797
 GameObject:
   m_ObjectHideFlags: 0
@@ -28578,11 +28605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.39247
+      value: 187.2
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.08804
+      value: 157.7829
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28614,11 +28641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 871.2661
+      value: 906.39996
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.54402
+      value: -78.89145
       objectReference: {fileID: 0}
     - target: {fileID: 6152139000034042138, guid: b076c72e17ef33c4796c68602efcf575, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28849,7 +28876,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 741080694}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
         m_MethodName: GameOver
         m_Mode: 1
@@ -30231,8 +30258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480.4812, y: -1078.0723}
-  m_SizeDelta: {x: 960.9624, y: 151.08804}
+  m_AnchoredPosition: {x: 500, y: -1121.5889}
+  m_SizeDelta: {x: 1000, y: 157.7829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710912803
 MonoBehaviour:
@@ -30550,12 +30577,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730765082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -30985,8 +31012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a997ad47094104cb73d8f644dcffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThankYou: {fileID: 230265924}
-  Offer: {fileID: 694310640}
+  ThankYou: {fileID: 0}
+  Offer: {fileID: 0}
 --- !u!4 &1767996062
 Transform:
   m_ObjectHideFlags: 0
@@ -32170,11 +32197,11 @@ RectTransform:
   m_Children:
   - {fileID: 723505521}
   - {fileID: 562298039}
-  m_Father: {fileID: 1446774880}
+  m_Father: {fileID: 1144796134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 345}
+  m_AnchoredPosition: {x: 0, y: 400}
   m_SizeDelta: {x: 0, y: 530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853333341
@@ -33299,7 +33326,7 @@ GameObject:
   - component: {fileID: 1921422369}
   - component: {fileID: 1921422370}
   m_Layer: 0
-  m_Name: SuggestManager
+  m_Name: Letter Suggest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33332,6 +33359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0de1861f0af6b40a1d2ee656f68698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  admobAdsScript: {fileID: 741080698}
   _suggestEffect:
   - {fileID: 2081006492}
   - {fileID: 1750387704}
@@ -33389,10 +33417,10 @@ MonoBehaviour:
   _input: {fileID: 1966726898}
   _board: {fileID: 605282669}
   _word: {fileID: 1354420888}
+  Notification: {fileID: 1563412958}
   _suggestColor: {r: 0.05882353, g: 0.07058824, b: 0.09411765, a: 0.6392157}
   _cantSuggest: {r: 0, g: 0, b: 0, a: 0}
   _defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  Notification: {fileID: 1563412958}
 --- !u!1 &1922742375
 GameObject:
   m_ObjectHideFlags: 0
@@ -35064,7 +35092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 470.3836, y: -649.52563}
+  m_AnchoredPosition: {x: 530.8558, y: -637.2019}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030817631
@@ -35442,7 +35470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741080694}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoogleadManager, Assembly-CSharp
         m_MethodName: CloseSpamError
         m_Mode: 1

@@ -5,22 +5,30 @@ using Random = UnityEngine.Random;
 
 public class Suggest : MonoBehaviour
 {
+
+    [SerializeField] AdmobAdsScript admobAdsScript; 
     [SerializeField] private Animator[] _suggestEffect;
     [SerializeField] private GameObject[] _onColorKeyBoard;
     [SerializeField] private KeyWord _input;
     [SerializeField] private ChangeColorBtn _board;
     [SerializeField] private BankWord _word;
-    public UnityEngine.Color _suggestColor;
-    public UnityEngine.Color _cantSuggest;
-    public Color _defaultColor;
     private string _str;
     private string _wordUsed;
     private string _bankWord;
     private string _letter = "QWERTYUIOPASDFGHJKLZXCVBNM";
-    private string RemoveUsedLetter1 , RemoveUsedLetter2, RemoveUsedLetter3;
+    private string RemoveUsedLetter1, RemoveUsedLetter2, RemoveUsedLetter3;
     public GameObject Notification;
-    
+    public UnityEngine.Color _suggestColor;
+    public UnityEngine.Color _cantSuggest;
+    public Color _defaultColor;
+    public static Suggest Instance {get; private set;}
+
     string RemoveUsedLetter;
+
+    private void Awake() {
+        if (Instance) Destroy(this); else { Instance = this; }
+
+    }
 
     public void SuggestButton()
     {
@@ -45,31 +53,31 @@ public class Suggest : MonoBehaviour
             dataList.Remove(exceptionsList[i]);
             //print(exceptionsList[i]);
         }
-        
+
 
         foreach (var data in dataList)
         {
             char _charRandom = dataList[Mathf.RoundToInt(Random.Range(0, dataList.Count))];
-            
+
             print(_charRandom);
-            if (!exceptionsList.Contains(_charRandom) && dataList.Contains(_charRandom) && 
-                RemoveUsedLetter1 != _charRandom.ToString() && RemoveUsedLetter2 != _charRandom.ToString() && 
-                RemoveUsedLetter3 != _charRandom.ToString() )
+            if (!exceptionsList.Contains(_charRandom) && dataList.Contains(_charRandom) &&
+                RemoveUsedLetter1 != _charRandom.ToString() && RemoveUsedLetter2 != _charRandom.ToString() &&
+                RemoveUsedLetter3 != _charRandom.ToString())
             {
-                if(count == 0)
+                if (count == 0)
                 {
                     RemoveUsedLetter1 = _charRandom.ToString();
                 }
-                if(count == 1)
+                if (count == 1)
                 {
                     RemoveUsedLetter2 = _charRandom.ToString();
                 }
-                if(count == 2)
+                if (count == 2)
                 {
                     RemoveUsedLetter3 = _charRandom.ToString();
                 }
-                
-                
+
+
                 if (dataList.Count < 3) // clear
                 {
                     for (int i = 0; i < dataList.Count; i++)

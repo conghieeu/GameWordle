@@ -7,7 +7,7 @@ public class GoogleAdsManager : MonoBehaviour
 {
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-  private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else
@@ -59,28 +59,28 @@ public class GoogleAdsManager : MonoBehaviour
         }
     }
 
-    public void UserChoseToWatchAd()
-    {
-        TimerStop = false;
-        if (!CheckInternetUser() && rewardedAd.IsLoaded()) rewardedAd.Show();
-    }
+    // public void UserChoseToWatchAd()
+    // {
+    //     TimerStop = false;
+    //     if (!CheckInternetUser() && rewardedAd.IsLoaded()) rewardedAd.Show();
+    // }
 
-    public void UserChoseOneMoreSuggest()
-    {
-        if (!CheckInternetUser() && rewardedAd.IsLoaded())
-        {
-            this.rewardedAd.Show();
-            Suggest.FindObjectOfType<Suggest>().SuggestButton();
-        }
-    }
+    // public void UserChoseOneMoreSuggest()
+    // {
+    //     if (!CheckInternetUser() && rewardedAd.IsLoaded())
+    //     {
+    //         this.rewardedAd.Show();
+    //         Suggest.FindObjectOfType<Suggest>().SuggestButton();
+    //     }
+    // }
 
-    public void UserChoseToAddMoreCurrent()
-    {
-        if (! && _rewardedAd.CanShowAd())
-        {
-            _rewardedAd.Show();
-        }
-    }
+    // public void UserChoseToAddMoreCurrent()
+    // {
+    //     if (! && _rewardedAd.CanShowAd())
+    //     {
+    //         _rewardedAd.Show();
+    //     }
+    // }
 
     public void Reward() => FindObjectOfType<Submit>().extendingButton();
 

@@ -11,7 +11,7 @@ public class CameraViewportHandler : MonoBehaviour
     public float UnitsSize = 1; // size of your scene in unity units
     public Constraint constraint = Constraint.Portrait;
     public static CameraViewportHandler Instance;
-    public new Camera camera;
+    public new Camera _camera;
 
     public bool executeInUpdate;
 
@@ -116,7 +116,7 @@ public class CameraViewportHandler : MonoBehaviour
     #region METHODS
     private void Awake()
     {
-        camera = GetComponent<Camera>();
+        _camera = GetComponent<Camera>();
         Instance = this;
         ComputeResolution();
     }
@@ -127,19 +127,19 @@ public class CameraViewportHandler : MonoBehaviour
 
         if (constraint == Constraint.Landscape)
         {
-            camera.orthographicSize = 1f / camera.aspect * UnitsSize / 2f;
+            _camera.orthographicSize = 1f / _camera.aspect * UnitsSize / 2f;
         }
         else
         {
-            camera.orthographicSize = UnitsSize / 2f;
+            _camera.orthographicSize = UnitsSize / 2f;
         }
 
-        _height = 2f * camera.orthographicSize;
-        _width = _height * camera.aspect;
+        _height = 2f * _camera.orthographicSize;
+        _width = _height * _camera.aspect;
 
         float cameraX, cameraY;
-        cameraX = camera.transform.position.x;
-        cameraY = camera.transform.position.y;
+        cameraX = _camera.transform.position.x;
+        cameraY = _camera.transform.position.y;
 
         leftX = cameraX - _width / 2;
         rightX = cameraX + _width / 2;
@@ -176,15 +176,15 @@ public class CameraViewportHandler : MonoBehaviour
 
         Matrix4x4 temp = Gizmos.matrix;
         Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
-        if (camera.orthographic)
+        if (_camera.orthographic)
         {
-            float spread = camera.farClipPlane - camera.nearClipPlane;
-            float center = (camera.farClipPlane + camera.nearClipPlane) * 0.5f;
-            Gizmos.DrawWireCube(new Vector3(0, 0, center), new Vector3(camera.orthographicSize * 2 * camera.aspect, camera.orthographicSize * 2, spread));
+            float spread = _camera.farClipPlane - _camera.nearClipPlane;
+            float center = (_camera.farClipPlane + _camera.nearClipPlane) * 0.5f;
+            Gizmos.DrawWireCube(new Vector3(0, 0, center), new Vector3(_camera.orthographicSize * 2 * _camera.aspect, _camera.orthographicSize * 2, spread));
         }
         else
         {
-            Gizmos.DrawFrustum(Vector3.zero, camera.fieldOfView, camera.farClipPlane, camera.nearClipPlane, camera.aspect);
+            Gizmos.DrawFrustum(Vector3.zero, _camera.fieldOfView, _camera.farClipPlane, _camera.nearClipPlane, _camera.aspect);
         }
         Gizmos.matrix = temp;
     }

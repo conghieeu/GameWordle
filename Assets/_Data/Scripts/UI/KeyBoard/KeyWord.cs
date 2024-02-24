@@ -33,6 +33,13 @@ public class KeyWord : MonoBehaviour
     
     public string word;
 
+    private void Start() {
+        wordCorrect = ' ';
+        wordIncorrect = ' ';
+        wordNotExist = ' ';
+
+    }
+
     public void alphabetFuncion(string alphabet)
     {
         if (word.Length <= 4)
